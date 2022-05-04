@@ -1,11 +1,12 @@
 package com.javaex.ex03;
+
 import java.io.*;
 import java.util.*;
 
-public class FriendApp {
+public class Ex02 {
 	public static void main(String[] args) throws IOException {
 		InputStream in = new FileInputStream("C:\\javaStudy\\file\\PhoneDB.txt");
-		InputStreamReader sr = new InputStreamReader(in);
+		InputStreamReader sr = new InputStreamReader(in, "UTF-8");
 		BufferedReader br = new BufferedReader(sr);
 		
 		ArrayList<Friend> fArray = new ArrayList<>();
@@ -26,20 +27,6 @@ public class FriendApp {
 			i.showInfo();
 		}
 		
-		OutputStream out = new FileOutputStream("C:\\javaStudy\\file\\PhoneDB.txt");
-		OutputStreamWriter sw = new OutputStreamWriter(out);
-		BufferedWriter bw = new BufferedWriter(sw);
-		
-		fArray.add(new Friend("마슈", "010-2074-8889", "없음"));
-		
-		Iterator<Friend> it = fArray.iterator();
-		
-		while(it.hasNext()) {
-			bw.write(it.next().writeString());
-			bw.newLine();
-		}
-		
-		bw.close();
 		br.close();
 	}
 }

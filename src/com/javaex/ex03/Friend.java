@@ -39,6 +39,6 @@ public class Friend {
 	}
 	
 	public String writeString() {
-		return name + "," + hp + "," + bp + ",";
+		return name + "," + hp + "," + bp;
 	}
 }
