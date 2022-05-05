@@ -3,9 +3,8 @@ import java.io.*;
 
 public class Ex01 {
 	public static void main(String[] args) throws IOException {
-		InputStream in = new FileInputStream("C:\\javaStudy\\file\\PhoneDB.txt");
-		InputStreamReader sr = new InputStreamReader(in, "UTF-8");
-		BufferedReader br = new BufferedReader(sr);
+		Reader in = new FileReader("C:\\javaStudy\\file\\PhoneDB.txt");
+		BufferedReader br = new BufferedReader(in);
 		
 		while(true) {
 			String data = br.readLine();
