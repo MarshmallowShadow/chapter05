@@ -22,7 +22,6 @@ public class Ex01 {
 		bw.newLine();
 		bw.write("내 이름을 불러줘");
 		
-		
 		bw.close();
 	}
 }

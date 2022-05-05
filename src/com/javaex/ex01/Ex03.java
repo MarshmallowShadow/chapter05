@@ -4,7 +4,7 @@ import java.io.*;
 public class Ex03 {
 
    public static void main(String[] args)throws IOException {
-	   
+	  
       InputStream in = new FileInputStream("C:\\javaStudy\\file\\img.jpg");
       BufferedInputStream bin = new BufferedInputStream(in);
       

@@ -4,7 +4,7 @@ import java.io.*;
 public class Ex03 {
 	public static void main(String[] args) throws IOException {
 		InputStream in = new FileInputStream("C:\\javaStudy\\file\\MS949.txt");
-		InputStreamReader isr = new InputStreamReader(in);
+		InputStreamReader isr = new InputStreamReader(in, "MS949"); //ANSI == MS949
 		BufferedReader br = new BufferedReader(isr);
 		
 		while(true) {
