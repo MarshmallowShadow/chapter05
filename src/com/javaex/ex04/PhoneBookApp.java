@@ -1,14 +1,14 @@
-package com.javaex.ex03;
+package com.javaex.ex04;
 
 import java.io.*;
 import java.util.*;
 
-public class Ex02 {
+public class PhoneBookApp {
 	public static void main(String[] args) throws IOException {
 		Reader in = new FileReader("C:\\javaStudy\\file\\PhoneDB.txt");
 		BufferedReader br = new BufferedReader(in);
 		
-		ArrayList<Friend> fArray = new ArrayList<>();
+		ArrayList<Person> pArray = new ArrayList<>();
 		
 		while(true) {
 			String data = br.readLine();
@@ -19,10 +19,10 @@ public class Ex02 {
 			
 			String[] info = data.split(",");
 			
-			fArray.add(new Friend(info[0], info[1], info[2]));
+			pArray.add(new Person(info[0], info[1], info[2]));
 		}
 		
-		for(Friend i:fArray) {
+		for(Person i:pArray) {
 			i.showInfo();
 		}
 		
